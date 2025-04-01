@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Posts", type: :request do
-    describe "POST /posts" do
+    describe "POST #create" do
         let(:valid_params) { { post: { title: "Title", content: "Content" } } }
 
         it "creates a Post" do
