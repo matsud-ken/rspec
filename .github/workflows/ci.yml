@@ -35,9 +35,6 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
-
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bundle exec importmap audit
 
