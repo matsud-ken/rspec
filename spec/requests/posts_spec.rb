@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Posts", type: :request do
-
     describe "GET #index" do
         it "リクエストが成功すること" do
             get posts_path
@@ -29,6 +28,8 @@ RSpec.describe "Posts", type: :request do
             get post_path(post)
             expect(response).to render_template :show
         end
+    end
+
     describe "POST #create" do
         let(:valid_params) { { post: { title: "Title", content: "Content" } } }
 
