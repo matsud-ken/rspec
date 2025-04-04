@@ -26,9 +26,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install gems
-        run: bundle install --jobs 4 --retry 3
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -37,6 +34,10 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+
+      - name: Install gems
+        run: bundle install --jobs 4 --retry 3
+  
 
       - name: Add execute permission to bin/rails
         run: chmod +x bin/rails
