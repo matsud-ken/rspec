@@ -35,6 +35,9 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Add execute permission to bin/rails
+        run: chmod +x bin/rails
+
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bin/rails importmap:audit
 
