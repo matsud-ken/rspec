@@ -37,7 +37,9 @@ jobs:
 
       - name: Install gems
         run: bundle install --jobs 4 --retry 3
-  
+
+      - name: Check installed gems
+        run: bundle list
 
       - name: Add execute permission to bin/rails
         run: chmod +x bin/rails
