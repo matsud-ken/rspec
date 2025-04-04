@@ -13,9 +13,10 @@ development:
 test:
   <<: *default
   database: mydb_test
-# production:
-#   <<: *default
-#   database: your_app_production
-#   username: your_production_username
-#   password: <%= ENV['DATABASE_PASSWORD'] %>
-#   host: your_production_host
+
+production:
+  <<: *default
+  database: mydb_production
+  username: matsuda
+  password: matsuda2468
+  host: posgre
