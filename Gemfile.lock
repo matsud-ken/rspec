@@ -315,7 +315,7 @@ DEPENDENCIES
   capybara
   debug
   factory_bot_rails
-  importmap-rails (~> 0.9)
+  importmap-rails
   jbuilder
   pg
   puma (>= 5.0)
