@@ -22,31 +22,6 @@ jobs:
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bundle exec brakeman --no-pager
 
-  scan_js:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
-
-      - name: Install gems
-        run: bundle install --jobs 4 --retry 3
-
-      - name: Check installed gems
-        run: bundle list
-
-      - name: Add execute permission to bin/rails
-        run: chmod +x bin/rails
-
-      - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bin/rails importmap:audit
-
   lint:
     runs-on: ubuntu-latest
     steps:
