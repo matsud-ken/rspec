@@ -19,5 +19,5 @@ production:
   database: mydb_production
   username: matsuda
   password: matsuda2468
-  host: postgres
+  host: posgre
   port: 5432
